@@ -1,0 +1,51 @@
+/* Make body a vertical flexbox: header, main, footer stacked */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make main a horizontal flexbox: article and aside side-by-side */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* main grows to fill space */
+}
+
+/* Give article more space: 2 parts vs 1 part for aside */
+article {
+  flex: 2;
+  overflow-y: auto; /* scroll if content is tall */
+}
+
+aside {
+  flex: 1;
+  overflow-y: auto;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+article {
+  padding: 20px;
+  background: white;
+}
+
+aside {
+  background: #eee;
+  padding: 20px;
+}
