@@ -1,0 +1,116 @@
+/* ===== Reset and Variables ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #ff6565;
+  --text-color: #333;
+  --bg-dark: #111;
+  --max-width: 1000px;
+  --font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ===== Header Section ===== */
+.header {
+  background-color: var(--bg-dark);
+  color: white;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--main-color);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url("images/hero-background.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero button {
+  background-color: var(--main-color);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.hero button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .hero {
+    padding: 80px 15px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+}

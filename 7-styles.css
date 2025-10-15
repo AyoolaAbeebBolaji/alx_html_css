@@ -1,0 +1,178 @@
+/* ========== GENERAL STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.header ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header a:hover {
+  color: #ff004c;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #111, #333);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.8;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #ff004c;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+}
+
+/* What we do */
+.what-we-do {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.what-we-do h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.item {
+  width: 250px;
+  text-align: center;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.9;
+}
+
+.item:hover {
+  transform: scale(1.1) rotate(2deg);
+  opacity: 1;
+}
+
+/* Our results */
+.results {
+  background: #f6f6f6;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.results h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.result-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: bounceIn 1.5s ease;
+}
+
+.result-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 76, 0.4);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

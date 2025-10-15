@@ -1,0 +1,59 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: #f7f7f7;
+  color: #222;
+}
+
+header {
+  background: #000;
+  color: white;
+  padding: 20px;
+}
+
+.results {
+  padding: 80px 20px;
+}
+
+.pentagon-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Pentagon Shape Using CSS */
+.pentagon {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  background: #ff004c;
+  margin: 40px 0;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.4s;
+}
+
+.pentagon:hover {
+  transform: scale(1.1);
+  background: #ff3370;
+}
+
+footer {
+  background: #000;
+  color: white;
+  padding: 20px;
+}

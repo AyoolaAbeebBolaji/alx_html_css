@@ -1,0 +1,86 @@
+/* Reuse from 7-styles.css with added hamburger styling */
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.header {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ff004c;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Hide menu on mobile initially */
+@media screen and (max-width: 480px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav ul.active {
+    display: flex;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
